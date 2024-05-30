@@ -1,0 +1,41 @@
+<div class="addbookform">
+    <form name="books" [formGroup]="addBook" (ngSubmit)="editBook()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Title</label>
+            <input type="email" class="form-control" formControlName="title" id="inputEmail4" placeholder="Title">
+            <div *ngIf="addBook.get('title').status != 'VALID' && addBook.get('title').touched" class="error text-danger">Required Title</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Author</label>
+            <input type="text" formControlName="author" class="form-control" id="inputPassword4" placeholder="Author">
+            <div *ngIf="addBook.get('author').status != 'VALID' && addBook.get('author').touched" class="error text-danger">Required Author</div>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Desctiption</label>
+          <textarea class="form-control"  formControlName="description" placeholder="add description here...">
+            </textarea>
+            <div *ngIf="addBook.get('description').status != 'VALID' && addBook.get('description').touched" class="error text-danger">Required Description</div>
+
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">publication year</label>
+            <input type="year" class="form-control"formControlName="publication_year" id="inputCity" placeholder="type year">
+            <div *ngIf="addBook.get('publication_year').status != 'VALID' && addBook.get('publication_year').touched" class="error text-danger">Required Year</div>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Genre</label>
+            <input type="text" id="inputState" formControlName="genre" class="form-control"/>
+              
+            <div *ngIf="addBook.get('genre').status != 'VALID' && addBook.get('genre').touched" class="error text-danger">Required genre</div>
+
+          </div>
+          
+        </div>
+        <button type="submit" class="btn btn-primary">Publish</button>
+    </form>
+</div>
