@@ -1,0 +1,20 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col"> ID </th>
+            <th scope="col"> title </th>
+            <th scope="col"> Author </th>
+            <th scope="col"> Year </th>
+        </tr>
+    </thead>
+    <tbody *ngIf="bookList$|async">
+        <tr *ngFor="let i of  bookList$|async" scope="row">
+            <td >{{i.id}}</td>
+            <td><a routerLink="../editbook/{{i.id}}">{{i.title}}</a></td>
+            <td>{{i.author}}</td>
+            <td>{{i.publication_year}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
