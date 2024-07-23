@@ -6,7 +6,7 @@ import { booklist } from "./booklist/booklist.component";
 import {HttpClientModule} from '@angular/common/http'
 import { bookService } from "./booklist/books.service";
 import { StoreModule } from "@ngrx/store";
-import { booksReducer } from "./store/reducers/books.reducer";
+import { booksReducer } from "./store/reducers/book.reducer";
 import { EffectsModule } from "@ngrx/effects";
 import { bookEffects } from "./store/effects/bookEffects";
 import { books } from "./books.component";
