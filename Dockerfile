@@ -22,6 +22,6 @@ FROM nginx:latest
 
 COPY /nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=deb-builder /dist/src/app/dist/bookApp-NgRx /usr/share/nginx/html
+COPY --from=deb-builder /dist/src/app/dist/Books-Maintaince-App /usr/share/nginx/html
 
 EXPOSE 80
