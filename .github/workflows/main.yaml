@@ -13,3 +13,5 @@ jobs:
         run: |
           docker login -u chidhu0001 -p ${{secrets.DOCKER_HUB_TOKEN}}
           docker push chidhu0001/bookapp-ngrx:latest
+      - name: logout from docker hub
+        run: docker logout
